@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, HelpCircle, FileText, ArrowUpRight, Send, Star, Zap, Crown, ShieldAlert } from 'lucide-react';
+import { Layers, HelpCircle, FileText, ArrowUpRight, Send, Star, Zap, Crown, ShieldAlert, Github } from 'lucide-react';
 
 interface AppHeaderProps {
   onGoHome: () => void;
@@ -92,6 +92,16 @@ export default function AppHeader({
 
       {/* Right Side Glass Button & Premium Sandbox Switch */}
       <div className="flex items-center gap-3">
+        <a
+          href="https://github.com/DahriAwais/appscope-beta-"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="GitHub Repository"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-mono uppercase tracking-wider font-extrabold bg-zinc-900/80 text-zinc-300 hover:text-[#24e09e] hover:bg-zinc-900 border border-zinc-800 hover:border-emerald-500/30 transition-all cursor-pointer shadow-md select-none"
+        >
+          <Github className="w-3.5 h-3.5" />
+          <span className="hidden sm:inline">GitHub</span>
+        </a>
         {setIsPremiumUnlocked && (
           <div
             className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-mono uppercase tracking-wider font-extrabold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 shadow-[0_0_12px_rgba(16,185,129,0.2)]"

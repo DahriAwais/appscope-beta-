@@ -401,10 +401,14 @@ export default function App() {
 
             {/* Central Typography Heading */}
             <div className="text-center relative z-10 max-w-3xl px-4 select-none mb-4">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-emerald-950/50 to-emerald-900/10 border border-emerald-500/15 rounded-full mb-5 shadow-[0_2px_8px_rgba(4,47,31,0.2)]">
-                <FolderSync className="w-3 h-3 text-emerald-400" />
-                <span className="font-mono text-[9px] uppercase tracking-widest text-[#24e09e] font-semibold">
-                  Cross-Platform App Store Search Engine
+              <div className="inline-flex flex-wrap justify-center items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-emerald-950/50 to-emerald-900/10 border border-emerald-500/15 rounded-full mb-5 shadow-[0_2px_8px_rgba(4,47,31,0.2)]">
+                <Github className="w-3.5 h-3.5 text-[#24e09e]" />
+                <span className="font-mono text-[9px] uppercase tracking-widest text-[#24e09e] font-extrabold">
+                  100% Open Source
+                </span>
+                <span className="w-1 h-1 rounded-full bg-zinc-700" />
+                <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400">
+                  Store Search Engine
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               </div>
@@ -414,7 +418,7 @@ export default function App() {
               </h1>
               
               <p className="text-zinc-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto font-sans font-medium">
-                Explore rankings, ratings, reviews, categories, competitors, and public store data from millions of mobile apps.
+                Explore rankings, ratings, reviews, categories, and public store details in an open-source research workspace built for builders.
               </p>
             </div>
 
@@ -716,9 +720,9 @@ export default function App() {
                   </div>
                   
                   <a
-                    href="https://github.com"
+                    href="https://github.com/DahriAwais/appscope-beta-"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-1.8 bg-zinc-900 hover:bg-[#002e1c] text-zinc-300 hover:text-[#24e09e] border border-zinc-850 hover:border-emerald-500/20 rounded-xl text-xs font-mono font-medium transition-all group-hover/os:scale-[1.02] shadow-sm shrink-0 whitespace-nowrap cursor-pointer"
                   >
                     <Github className="w-4 h-4" />
