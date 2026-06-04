@@ -29,7 +29,9 @@ import {
   Trophy,
   DollarSign,
   ArrowRight,
-  Info
+  Info,
+  Github,
+  Code2
 } from 'lucide-react';
 import AppHeader from './components/AppHeader';
 import CustomChart from './components/CustomChart';
@@ -687,6 +689,45 @@ export default function App() {
 
             {/* Removed Quick Research Presets as requested */}
             
+            {/* Open Source Initiative Section */}
+            <div className="w-full max-w-2xl mt-8 px-1 z-25 relative">
+              <div className="relative group/os p-5 rounded-2xl bg-zinc-950/45 border border-zinc-900/80 hover:border-emerald-500/30 transition-all duration-300 shadow-xl overflow-hidden">
+                {/* Subtle backglow gradient */}
+                <div className="absolute top-0 right-0 -translate-y-1/2 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+                
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="flex gap-3.5">
+                    <div className="p-2.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl shrink-0 mt-0.5">
+                      <Code2 className="w-4 h-4 text-[#24e09e]" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 animate-fade-in">
+                        <h4 className="font-display font-bold text-zinc-100 text-sm tracking-tight">
+                          Open Source Initiative
+                        </h4>
+                        <span className="text-[8px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 px-1.5 py-0.5 rounded font-mono uppercase tracking-widest font-black">
+                          GitHub Community
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-zinc-400 leading-relaxed font-sans mt-1">
+                        We are building AppScope in the open. Explore our directory parser, store index API model, and layout frameworks. Contributions, stars, and pull requests are welcomed!
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-1.8 bg-zinc-900 hover:bg-[#002e1c] text-zinc-300 hover:text-[#24e09e] border border-zinc-850 hover:border-emerald-500/20 rounded-xl text-xs font-mono font-medium transition-all group-hover/os:scale-[1.02] shadow-sm shrink-0 whitespace-nowrap cursor-pointer"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>View Repository</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         ) : (
           /* ==================== DETAILS PAGE ==================== */
