@@ -1,0 +1,6 @@
+{
+  "name": "AppScope",
+  "description": "Advanced real-time research and analysis engine for millions of mobile apps across iOS and Android.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

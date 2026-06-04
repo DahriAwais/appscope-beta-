@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="dark bg-[#030d0a] text-zinc-100">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var customFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return customFetch;
+            },
+            set: function(val) {
+              customFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Silent catch to prevent errors in non-configurable environments
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppScope — Mobile App Search & Analytics Platform</title>
+    <!-- Premium Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#030d0a] min-h-screen text-zinc-100 selection:bg-emerald-500/30 selection:text-emerald-300 antialiased font-sans">
+    <div id="root" class="min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

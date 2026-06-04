@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Custom glow animations and styles matching the provided mockup design */
+@layer utilities {
+  .radial-aurora {
+    background: radial-gradient(
+      circle 500px at 50% 40%,
+      rgba(16, 185, 129, 0.15) 0%,
+      rgba(4, 120, 87, 0.05) 50%,
+      rgba(3, 13, 10, 0) 100%
+    );
+  }
+
+  .radial-aurora-glow {
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(16, 185, 129, 0.22) 0%,
+      rgba(5, 150, 105, 0.06) 40%,
+      rgba(3, 13, 10, 0) 70%
+    );
+  }
+
+  .glass-panel {
+    background: rgba(8, 28, 22, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+  }
+
+  .glass-panel-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-panel-hover:hover {
+    background: rgba(8, 28, 22, 0.6);
+    border-color: rgba(16, 185, 129, 0.25);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.08);
+  }
+
+  /* Custom high-scannable scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(3, 13, 10, 0.5);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.4);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
